@@ -9,31 +9,6 @@ override_dh_auto_install:
 	mkdir -p debian/maratona-linguagens-doc/usr/share/applications/
 	cp icones-desktop/* debian/maratona-linguagens-doc/usr/share/applications/
 
-	# Firefox copiado e renomeado
-	mkdir -p debian/maratona-desktop/usr/share/applications/
-	cp firefox.desktop debian/maratona-desktop/usr/share/applications/firefox_boca.desktop
-
-	# Script para ser inicializado no começo da secao para marcar os atalhos
-	# como confiaveis
-	mkdir -p debian/maratona-desktop/etc/profile.d/
-	cp maratona-profile/maratona-desktop-profile.sh debian/maratona-desktop/etc/profile.d/
-
-	# Arquivo de configuração dos editores
-	mkdir -p debian/maratona-editores/etc/skel/
-	cp maratona-editores-config/* debian/maratona-editores/etc/skel/
-
-	# Service para zerar home no reboot via systemd
-	mkdir -p debian/maratona-usuario-icpc/lib/systemd/system/
-	cp usuario-icpc-service/maratona-usuario-icpc.service debian/maratona-usuario-icpc/lib/systemd/system/
-
-	mkdir -p debian/maratona-usuario-icpc/usr/sbin/
-	cp scripts-administrativos/zera-home-icpc debian/maratona-usuario-icpc/usr/sbin/
-	chmod a+x debian/maratona-usuario-icpc/usr/sbin/zera-home-icpc
-	mkdir -p debian/maratona-usuario-icpc/usr/bin
-	cp scripts-administrativos/clean-icpc-on-reboot debian/maratona-usuario-icpc/usr/bin/
-	chmod a+x debian/maratona-usuario-icpc/usr/bin/clean-icpc-on-reboot
-
-
 %:
 	echo "$@"
 	dh $@
