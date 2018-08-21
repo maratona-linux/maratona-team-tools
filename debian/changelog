@@ -1,0 +1,26 @@
+maratona-team-tools (20180820) bionic; urgency=medium
+
+  * Bruno Cesar Ribas (2):
+      maratona-{editores,{linguagens{,-doc}} are maratona-team-tools
+      README.md: Slightly updated
+
+   * Wall Berg Morais (16):
+      debian/control: Atualizado os conflitos para Ubuntu 18.04. (#3)
+      debian/{control,maratona-editores*}: Atualizando dependêndencias e scripts. (#4)
+      maratona-linguagens: Atualizando dependências e scripts. (#5)
+      icones-desktop/jetbrains-pycharm-ce.desktop: Removido (#7)
+      Atualizando dependências do maratona-linguagens-doc. (#8)
+      Removendo maratona-skel do maratona-meta. (#9)
+      Adicionado ícones para documentação das linguagens (#10)
+      maratona-usuario-icpc: Atualizando dependências e scripts. (#11)
+      debian/{maratona-desktop.postinst,rules}: Atualização da Barra de favoritos (#12)
+      debian/maratona-{editores,linguagens}.templates: Fix english text. (#13)
+      maratona-usuario-icpc: zera-home-icpc agora é executado ao inicializar o sistema. (#15)
+      maratona-editores: depende python3-distutils e python-distutils-extra
+      maratona-editores: pré-depende do maratona-linguagens. (#17)
+      maratona-desktop: Adicionado script que altera metadado do icones .desktop. (#18)
+      maratona-editores: Removido o netbeans como dependência. (#19)
+      maratona-{editores,usuario-icpc}: Adicionado arquivo de configuração editores. (#21)
+
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Mon, 20 Aug 2018 21:38:59 -0300
