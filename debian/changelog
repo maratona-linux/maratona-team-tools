@@ -1,3 +1,11 @@
+maratona-team-tools (20180826.2) bionic; urgency=medium
+
+  * Bruno Cesar Ribas (2):
+      d/control: adding conflicts to maratona-editores
+      d/control: Removing pre-depends of maratona-editores
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Sun, 26 Aug 2018 15:18:13 -0300
+
 maratona-team-tools (20180820) bionic; urgency=medium
 
   * Bruno Cesar Ribas (2):
