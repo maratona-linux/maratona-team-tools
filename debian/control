@@ -31,3 +31,10 @@ Description: Pacote Virtual do Maratona Linux com os editores permitidos
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 
+Package: maratona-editores-chile
+Architecture: all
+Pre-Depends: snapd
+Description: Pacote contendo a instalação do sublime-text para o maratona
+ via snap.
+ .
+ É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
