@@ -39,3 +39,11 @@ Description: Pacote contendo a instalação do sublime-text para o maratona
  via snap.
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+
+Package: maratona-editores-cuba
+Architecture: all
+Depends: default-jdk, default-jre
+Description: Pacote contendo a instalação do netbeans apache para o maratona
+ via snap.
+ .
+ É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
