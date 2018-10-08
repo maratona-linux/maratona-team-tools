@@ -26,6 +26,7 @@ flag=1
 while [ $flag -eq 1 ]; do
 	packages=""
 	try_install_snap sublime-text --classic || packages=$packages"sublime-text"
+	try_install_snap vscode --classic || packages=$packages", vscode"
 
 	if [ "$packages" != "" ]; then
 		db_subst maratona-editores-chile/question_try_again package $packages || true
