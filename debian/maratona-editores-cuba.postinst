@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+
+# --------- Inicio da instalação do NetBeans ---------
+# Verifica se o netbeans existe, caso positivo, exclui ele.
+[ -d /opt/netbeans ] && rm -Rf /opt/netbeans
+[ -f /usr/bin/netbeans ] && rm -Rf /usr/bin/netbeans
+[ -f /usr/share/applications/netbeans.desktop ] && \
+	rm -Rf /usr/share/applications/netbeans.desktop
+
+# Baixando o netbeans do repositorio.
+wget http://ftp.unicamp.br/pub/apache/incubator/netbeans/incubating-netbeans-java/incubating-9.0/incubating-netbeans-java-9.0-bin.zip -O /tmp/netbeans.zip
+
+RET=$?
+if [[ "$RET" != "0" ]] ; then
+	exit $RET
+fi
+
+# Descompactando
+[ -f /tmp/netbeans.zip ] && unzip -q /tmp/netbeans.zip -d /opt/
+
+# Fazendo um link para /usr/bin/netbeans, para que todos os usuários vejam.
+[ -d /opt/netbeans ] && ln -sf /opt/netbeans/bin/netbeans /usr/bin/netbeans
+
+# Adicionando atalho para /usr/share/applications/
+[ -d /opt/netbeans ] && cat << EOF > /usr/share/applications/netbeans.desktop
+[Desktop Entry]
+Version=1.0
+Name=netbeans
+Exec=/opt/netbeans/bin/netbeans
+Icon=/opt/netbeans/nb/netbeans.png
+Type=Application
+Categories=Application
+EOF
+# ------- Fim da intalação do NetBeans -------
+
+exit 0
