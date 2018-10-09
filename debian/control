@@ -23,7 +23,7 @@ Description: Pacote contendo as dependências de documentação das linguagens
 
 Package: maratona-editores
 Architecture: all
-Recommends: maratona-editores-chile
+Recommends: maratona-editores-chile, maratona-editores-cuba
 Pre-Depends: snapd
 Depends: maratona-linguagens, vim, vim-gnome, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, gedit-developer-plugins, kate, konsole, codeblocks, python3-distutils, python-distutils-extra
 Conflicts: kpackagelauncherqml, kwayland-integration, libaacs0, libbdplus0, libhfstospell9, libkf5config-bin, libkf5dbusaddons-bin, libkf5globalaccel-bin, libkf5globalaccelprivate5, libkf5iconthemes-bin, libkf5idletime5, libkf5parts-plugins, libproxy-tools, libqt5sql5-sqlite, libqt5test5, libqt5waylandclient5, libqt5waylandcompositor5, libvlc-bin, libvoikko1, mesa-va-drivers, mesa-vdpau-drivers, qml-module-org-kde-newstuff, qt5-gtk-platformtheme, qttranslations5-l10n, qtwayland5, sonnet-plugins, va-driver-all, vdpau-driver-all
