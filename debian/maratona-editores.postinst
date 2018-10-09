@@ -47,8 +47,3 @@ while [ $flag -eq 1 ]; do
 		flag=0
 	fi
 done
-
-# Adicionando o plugin do Eclipse - Descompactando o arquivo.
-[ -f /etc/skel/eclipse-cdt.tar.xz ] && \
-tar -xf /etc/skel/eclipse-cdt.tar.xz -C /etc/skel/ && \
-rm /etc/skel/eclipse-cdt.tar.xz
