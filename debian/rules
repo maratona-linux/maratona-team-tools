@@ -1,6 +1,10 @@
 #! /usr/bin/make -f
 
 override_dh_auto_install:
+	# Plugin Eclipse-cdt
+	mkdir -p debian/maratona-editores/etc/skel/
+	tar -xf plugins/eclipse-cdt.tar.xz -C debian/maratona-editores/etc/skel/
+
 	# Icones na pasta destinada a icones no /usr/share/icons
 	mkdir -p debian/maratona-linguagens-doc/usr/share/icons/maratona-linguagens-doc/scalable/
 	cp icons/* debian/maratona-linguagens-doc/usr/share/icons/maratona-linguagens-doc/scalable/

@@ -47,4 +47,3 @@ while [ $flag -eq 1 ]; do
 		flag=0
 	fi
 done
-
