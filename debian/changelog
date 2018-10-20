@@ -1,3 +1,16 @@
+maratona-team-tools (20181015) bionic; urgency=medium
+
+  * Wall Berg Morais (7):
+      Adicionando o maratona-editores-chile como um Recommends do maratona-editores
+      Adicionado o vscode como dependência do maratona-editores-chile. (#4)
+      Adicionando script de postrm ao maratona-editores-chile (#5)
+      Adicionado ao maratona-team-tools o maratona-editores-cuba.
+      Adicionado ao maratona-editores o plugin eclipse-cdt, do eclipse. (#6)
+      Adicionado o maratona-editores-cuba como um recommends do maratona-editores. (#9)
+      Criando maratona-editores-chile.
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Mon, 15 Oct 2018 23:48:39 -0300
+
 maratona-team-tools (20180826.2) bionic; urgency=medium
 
   * Bruno Cesar Ribas (2):
