@@ -1,3 +1,9 @@
+maratona-team-tools (20181015ubuntu1) bionic; urgency=medium
+
+  * Demote maratona-editores-cuba from Recommends to Suggests
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Tue, 14 May 2019 18:43:13 -0300
+
 maratona-team-tools (20181015) bionic; urgency=medium
 
   * Wall Berg Morais (7):
