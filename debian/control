@@ -1,7 +1,7 @@
 Source: maratona-team-tools
 Section: devel
 Priority: optional
-Maintainer: Bruno Cesar Ribas <brunoribas@gmail.com>
+Maintainer: Bruno Cesar Ribas <bruno.ribas@unb.br>
 Build-Depends: debhelper
 
 Package: maratona-linguagens
