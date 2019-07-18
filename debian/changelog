@@ -1,3 +1,12 @@
+maratona-team-tools (20190716) bionic; urgency=medium
+
+  * Begin 2019 work
+  * Removed kate and konsole
+  * Removed maratona-editores-cuba
+  * Replaced vscode to code in maratona-editores-chile
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Tue, 16 Jul 2019 10:57:51 -0300
+
 maratona-team-tools (20181015ubuntu1) bionic; urgency=medium
 
   * Demote maratona-editores-cuba from Recommends to Suggests
