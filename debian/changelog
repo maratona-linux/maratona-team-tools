@@ -1,3 +1,9 @@
+maratona-team-tools (20190716.1) bionic; urgency=low
+
+  * Removed eclipse-cdt plugin
+
+ -- Bruno Cesar Ribas <brunoribas@gmail.com>  Fri, 19 Jul 2019 13:14:52 -0300
+
 maratona-team-tools (20190716) bionic; urgency=medium
 
   * Begin 2019 work
