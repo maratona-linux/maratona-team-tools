@@ -1,8 +1,0 @@
-#!/bin/bash
-
-set -e
-
-snap remove sublime-text
-snap remove vscode
-
-exit 0

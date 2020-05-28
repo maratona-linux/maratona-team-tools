@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+. /usr/share/debconf/confmodule
+
+source /usr/share/maratona-snap-common/install_snap.sh
+
+flag=1
+while [ $flag -eq 1 ]; do
+	packages=""
+	try_install_snap sublime-text --classic || packages=$packages"sublime-text"
+	try_install_snap code --classic || packages=$packages", code"
+	try_install_snap pycharm-community --classic || packages=$packages"pycharm-community"	
+	try_install_snap intellij-idea-community --classic --edge || \
+        packages=$packages", intellij-idea-community"
+
+        try_install_snap eclipse --classic || packages=$packages", eclipse"
+
+	if [ "$packages" != "" ]; then
+		db_subst maratona-editores-snap/question_try_again package $packages || true
+		db_input high maratona-editores-snap/question_try_again || true
+		db_go || true
+		db_get maratona-editores-snap/question_try_again || true
+		if [ "$RET" == "Later" ]; then
+			flag=0
+			db_input high maratona-editores-snap/notice || true
+			db_go || true
+			db_get maratona-editores-snap/notice
+		fi
+	else
+		flag=0
+	fi
+done
