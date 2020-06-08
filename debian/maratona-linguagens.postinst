@@ -3,19 +3,7 @@
 set -e
 . /usr/share/debconf/confmodule
 
-try_install_snap(){
-	try=0
-	while [ $(snap list | grep $1 | wc -l) -eq 0 ] && [ $try -lt 3 ]; do
-		snap install $1 $2 $3
-		try=$((try+1))
-	done
-
-	if [ $(snap list | grep $1 | wc -l) -eq 0 ]; then
-		return 1
-	else
-		return 0
-	fi
-}
+source /usr/share/maratona-snap-common/install_snap.sh
 
 flag=1
 while [ $flag -eq 1 ]; do

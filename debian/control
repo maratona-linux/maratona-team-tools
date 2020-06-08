@@ -6,8 +6,7 @@ Build-Depends: debhelper
 
 Package: maratona-linguagens
 Architecture: all
-Pre-Depends: snapd
-Depends: build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes, pyflakes3, python
+Depends: maratona-snap-common, build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes, pyflakes3, python
 Description: Pacote com os compiladores das linguagens de programação
  aceitas na maratona
  .
@@ -23,17 +22,16 @@ Description: Pacote contendo as dependências de documentação das linguagens
 
 Package: maratona-editores
 Architecture: all
-Recommends: maratona-editores-chile
-Pre-Depends: snapd
-Depends: maratona-linguagens, vim, vim-gnome, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, gedit-developer-plugins, codeblocks, python3-distutils, python-distutils-extra
+Recommends: maratona-editores-snap
+Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, python3-distutils, python-distutils-extra
 Description: Pacote Virtual do Maratona Linux com os editores permitidos
  na maratona
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 
-Package: maratona-editores-chile
+Package: maratona-editores-snap
 Architecture: all
-Pre-Depends: snapd
+Depends: maratona-snap-common
 Description: Pacote contendo a instalação do sublime-text para o maratona
  via snap.
  .
