@@ -36,3 +36,11 @@ Description: Pacote contendo a instalação via snap dos seguintes editores:
  sublime-text, vscode, pycharm-community, intellij-idea-community, eclipse e clion
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+
+Package: maratona-vscode-extensions
+Architecture: all
+Depends: maratona-editores-snap, debconf
+Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
+ .
+ É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+ 
