@@ -32,7 +32,7 @@ Description: Pacote Virtual do Maratona Linux com os editores permitidos
 Package: maratona-editores-snap
 Architecture: all
 Depends: maratona-snap-common
-Description: Pacote contendo a instalação do sublime-text para o maratona
- via snap.
+Description: Pacote contendo a instalação via snap dos seguintes editores:
+ sublime-text, vscode, pycharm-community, intellij-idea-community, eclipse e clion
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
