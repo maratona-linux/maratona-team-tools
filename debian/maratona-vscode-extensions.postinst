@@ -3,15 +3,15 @@ set -e
 source /usr/share/debconf/confmodule
 
 try_install_extension() {
-	options="--extensions-dir /usr/share/maratona-vscode-extensions/ --user-data-dir /usr/share/maratona-vscode-extensions/"
+	options="--extensions-dir /opt/vscode-extensions/ --user-data-dir /opt/vscode-extensions/"
 	try=0
-	while ! /snap/bin/code --list-extensions $options | grep -q $1 && [ $try -lt 3 ]; do
-		/snap/bin/code --install-extension $1 $options
+	while ! flatpak run com.visualstudio.code --list-extensions $options | grep -q $1 && [ $try -lt 3 ]; do
+		flatpak run com.visualstudio.code --install-extension $1 $options
 	  try=$((try+1))
 	done
 
 	# In case of success, return 0. In case of failure, return 1.
-	if ! /snap/bin/code --list-extensions $options | grep -q $1 ; then
+	if ! flatpak run com.visualstudio.code --list-extensions $options | grep -q $1 ; then
 		return 1
 	else
 		return 0
@@ -55,3 +55,6 @@ while $flag ; do
 		flag=false
 	fi
 done
+
+rm -rf /usr/share/maratona-vscode-extensions
+mv /opt/vscode-extensions /usr/share/maratona-vscode-extensions

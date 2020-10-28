@@ -6,7 +6,7 @@ Build-Depends: debhelper
 
 Package: maratona-linguagens
 Architecture: all
-Depends: maratona-snap-common, build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes, pyflakes3, python
+Depends: build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes, pyflakes3, python, unzip
 Description: Pacote com os compiladores das linguagens de programação
  aceitas na maratona
  .
@@ -22,24 +22,24 @@ Description: Pacote contendo as dependências de documentação das linguagens
 
 Package: maratona-editores
 Architecture: all
-Recommends: maratona-editores-snap
+Recommends: maratona-editores-flatpak
 Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, python3-distutils, python-distutils-extra
 Description: Pacote Virtual do Maratona Linux com os editores permitidos
  na maratona
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 
-Package: maratona-editores-snap
+Package: maratona-editores-flatpak
 Architecture: all
-Depends: maratona-snap-common
-Description: Pacote contendo a instalação via snap dos seguintes editores:
+Depends: maratona-flatpak-common
+Description: Pacote contendo a instalação via flatpak dos seguintes editores:
  sublime-text, vscode, pycharm-community, intellij-idea-community, eclipse e clion
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 
 Package: maratona-vscode-extensions
 Architecture: all
-Depends: maratona-editores-snap, debconf
+Depends: maratona-editores-flatpak, debconf
 Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.

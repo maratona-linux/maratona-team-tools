@@ -1,7 +1,7 @@
 Template: maratona-vscode-extensions/question_try_again
 Type: select
 Choices: Try Again, Later
-Description: It was not possible to install the package(s) ${package} via snap.
+Description: It was not possible to install the extension(s) ${package}.
  Do you want to try to install again?
 
 Template: maratona-vscode-extensions/notice

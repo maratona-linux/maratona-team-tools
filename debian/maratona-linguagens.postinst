@@ -1,28 +1,17 @@
 #!/bin/bash
-
 set -e
 . /usr/share/debconf/confmodule
 
-source /usr/share/maratona-snap-common/install_snap.sh
+URL="https://github.com/JetBrains/kotlin/releases/download/v1.4.0/kotlin-compiler-1.4.0.zip"
+valid_md5="590c97a160d381da103bfa0d8d4461a5"
 
-flag=1
-while [ $flag -eq 1 ]; do
-	packages=""
-	try_install_snap kotlin --classic || packages=$packages"kotlin"
+wget --tries=3 --wait=2 --random-wait -O /var/cache/kotlin.zip $URL
 
-	if [ "$packages" != "" ]; then
-		db_subst maratona-linguagens/question_try_again package $packages || true
-		db_input high maratona-linguagens/question_try_again || true
-		db_go || true
-		db_get maratona-linguagens/question_try_again || true
-		if [ "$RET" == "Later" ]; then
-			flag=0
-			db_input high maratona-linguagens/notice || true
-			db_go || true
-			db_get maratona-linguagens/notice
-		fi
-	else
-		flag=0
-	fi
-done
-
+if (( $? == 0 )) && md5sum --quiet -c <<<"$valid_md5 /var/cache/kotlin.zip"  ; then
+  unzip /var/cache/kotlin.zip -d /opt/
+  rm -f /var/cache/kotlin.zip
+else
+  db_input high maratona-editores/notice || true
+  db_go || true
+  db_get maratona-editores/notice
+fi
