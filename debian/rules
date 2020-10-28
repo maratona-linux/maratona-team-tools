@@ -9,6 +9,8 @@ override_dh_auto_install:
 	mkdir -p debian/maratona-linguagens-doc/usr/share/applications/
 	cp icones-desktop/* debian/maratona-linguagens-doc/usr/share/applications/
 
+	mkdir -p debian/maratona-vscode-extensions/usr/share/maratona-vscode-extensions/
+
 	mkdir -p debian/maratona-linguagens/etc/profile.d/
 	cp maratona-profile/maratona-linguagens-profile.sh debian/maratona-linguagens/etc/profile.d/
 
