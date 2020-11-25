@@ -6,7 +6,7 @@ Build-Depends: debhelper
 
 Package: maratona-linguagens
 Architecture: all
-Depends: build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes, pyflakes3, python, unzip
+Depends: build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes3, unzip
 Description: Pacote com os compiladores das linguagens de programação
  aceitas na maratona
  .
@@ -14,7 +14,7 @@ Description: Pacote com os compiladores das linguagens de programação
 
 Package: maratona-linguagens-doc
 Architecture: all
-Depends: manpages-dev, gcc-doc, libstdc++-7-doc, default-jdk-doc, python3-doc, python2.7-doc, cppreference-doc-en-html
+Depends: manpages-dev, gcc-doc, libstdc++-7-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html
 Description: Pacote contendo as dependências de documentação das linguagens
  aceitas na maratona
  .
@@ -23,7 +23,7 @@ Description: Pacote contendo as dependências de documentação das linguagens
 Package: maratona-editores
 Architecture: all
 Recommends: maratona-editores-flatpak
-Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, python3-distutils, python-distutils-extra
+Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, python3-distutils
 Description: Pacote Virtual do Maratona Linux com os editores permitidos
  na maratona
  .
