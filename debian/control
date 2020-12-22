@@ -32,6 +32,7 @@ Description: Pacote Virtual do Maratona Linux com os editores permitidos
 Package: maratona-editores-flatpak
 Architecture: all
 Depends: maratona-flatpak-common
+Recommends: maratona-vscode-extensions
 Description: Pacote contendo a instalação via flatpak dos seguintes editores:
  sublime-text, vscode, pycharm-community, intellij-idea-community, eclipse e clion
  .
@@ -40,6 +41,7 @@ Description: Pacote contendo a instalação via flatpak dos seguintes editores:
 Package: maratona-vscode-extensions
 Architecture: all
 Enhances: maratona-editores-flatpak
+Pre-depends: maratona-editores-flatpak
 Depends: debconf
 Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
  .
