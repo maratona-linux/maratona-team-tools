@@ -39,9 +39,9 @@ Description: Pacote contendo a instalação via flatpak dos seguintes editores:
 
 Package: maratona-vscode-extensions
 Architecture: all
-Enhances: maratona-editores-flatpak 
+Enhances: maratona-editores-flatpak
 Depends: debconf
 Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
- 
+
