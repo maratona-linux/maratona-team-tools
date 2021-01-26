@@ -6,7 +6,7 @@ Build-Depends: debhelper
 
 Package: maratona-linguagens
 Architecture: all
-Depends: build-essential, default-jre, default-jdk, libstdc++-7-dev, libstdc++6-7-dbg, gdb, python3, pyflakes3, unzip, wget
+Depends: build-essential, default-jre, default-jdk, gdb, python3, pyflakes3, unzip, wget
 Description: Pacote com os compiladores das linguagens de programação
  aceitas na maratona
  .
@@ -14,7 +14,7 @@ Description: Pacote com os compiladores das linguagens de programação
 
 Package: maratona-linguagens-doc
 Architecture: all
-Depends: manpages-dev, gcc-doc, libstdc++-7-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html
+Depends: manpages-dev, gcc-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html
 Description: Pacote contendo as dependências de documentação das linguagens
  aceitas na maratona
  .
