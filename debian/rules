@@ -9,6 +9,10 @@ override_dh_auto_install:
 	mkdir -p debian/maratona-linguagens-doc/usr/share/applications/
 	cp icones-desktop/* debian/maratona-linguagens-doc/usr/share/applications/
 
+	# Copiando documentação do kotlin para /usr/share/doc/maratona-kotlin-doc/
+	mkdir -p debian/maratona-kotlin-doc/usr/share/doc/maratona-kotlin-doc/
+	cp docs/kotlin-reference.pdf debian/maratona-kotlin-doc/usr/share/doc/maratona-kotlin-doc/
+
 	mkdir -p debian/maratona-vscode-extensions/usr/share/maratona-vscode-extensions/
 
 	mkdir -p debian/maratona-linguagens/etc/profile.d/
