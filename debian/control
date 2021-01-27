@@ -14,7 +14,7 @@ Description: Pacote com os compiladores das linguagens de programação
 
 Package: maratona-linguagens-doc
 Architecture: all
-Depends: manpages-dev, gcc-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html
+Depends: manpages-dev, gcc-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html, maratona-kotlin-doc
 Description: Pacote contendo as dependências de documentação das linguagens
  aceitas na maratona
  .
@@ -44,6 +44,12 @@ Enhances: maratona-editores-flatpak
 Pre-depends: maratona-editores-flatpak
 Depends: debconf
 Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
+ .
+ É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+
+Package: maratona-kotlin-doc
+Architecture: all
+Description: Pacote contendo a instalação da documentação do Kotlin para a maratona.
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 

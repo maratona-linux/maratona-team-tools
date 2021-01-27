@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1
+Name=Kotlin Doc
+Comment=Kotlin Doc
+Icon=/usr/share/icons/maratona-linguagens-doc/scalable/kotlin_logo.svg
+Exec=firefox /usr/share/doc/maratona-kotlin-doc/kotlin-reference.pdf
+Terminal=false
+Type=Application
