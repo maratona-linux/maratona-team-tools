@@ -2,3 +2,15 @@ debian/files
 debian/*log
 debian/*.substvars
 debian/.debhelper
+debian/debhelper-build-stamp
+debian/maratona-editores-flatpak.postrm.debhelper
+debian/maratona-editores-flatpak/
+debian/maratona-editores/
+debian/maratona-kotlin-doc/
+debian/maratona-linguagens-doc.postinst.debhelper
+debian/maratona-linguagens-doc.postrm.debhelper
+debian/maratona-linguagens-doc/
+debian/maratona-linguagens.postrm.debhelper
+debian/maratona-linguagens/
+debian/maratona-vscode-extensions.postrm.debhelper
+debian/maratona-vscode-extensions/
