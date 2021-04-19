@@ -7,17 +7,14 @@ source /usr/share/maratona-flatpak-common/install_flatpak.sh
 flag=1
 while [ $flag -eq 1 ]; do
 	packages=""
-	try_install_flatpak com.sublimetext.three || packages=$packages"sublime-text"
-	try_install_flatpak com.visualstudio.code || packages=$packages", code"
-	try_install_flatpak com.jetbrains.CLion || packages=$packages", clion"
-	try_install_flatpak com.jetbrains.PyCharm-Community || packages=$packages", pycharm-community"	
+	try_install_flatpak com.visualstudio.code || packages=${packages}"code"
+	try_install_flatpak com.jetbrains.CLion || packages=${packages}" clion"
+	try_install_flatpak com.jetbrains.PyCharm-Community || packages=${packages}" pycharm-community"
 	try_install_flatpak com.jetbrains.IntelliJ-IDEA-Community || \
-        packages=$packages", intellij-idea-community"
+        packages=${packages}" intellij-idea-community"
 
-	try_install_flatpak org.eclipse.Java || packages=$packages", eclipse"
-
-	if [ "$packages" != "" ]; then
-		db_subst maratona-editores-flatpak/question_try_again package $packages || true
+	if [ "${packages}" != "" ]; then
+		db_subst maratona-editores-flatpak/question_try_again package "${packages}" || true
 		db_input high maratona-editores-flatpak/question_try_again || true
 		db_go || true
 		db_get maratona-editores-flatpak/question_try_again || true
