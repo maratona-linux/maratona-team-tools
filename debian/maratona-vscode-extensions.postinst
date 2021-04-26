@@ -18,12 +18,58 @@ try_install_extension() {
 	fi
 }
 
+install_cpptools_extension() {
+	readonly releases_url="https://api.github.com/repos/microsoft/vscode-cpptools/releases/latest"
+	readonly releases_info_file="releases.json"
+	download_url=""
+	readonly package_file="cpptools-linux.vsix"
+
+	echo "Accessing $releases_url"
+
+	# download json
+	if ! wget --tries=3 --timeout=60 --output-document="$releases_info_file" "$releases_url"; then
+		echo "Failed to download releases information for ms-vscode.cpptools"
+		return 2
+	fi
+
+	# check file
+	if [ ! -f "$releases_info_file" ] ; then
+		echo "Failed to read releases information file for ms-vscode.cpptools"
+		return 3
+	fi
+
+	# parse file
+	if ! download_url="$(jq -r '.assets[] | select(.name == "cpptools-linux.vsix") | .browser_download_url' "$releases_info_file")" ; then
+		echo "Failed to read download URL for ms-vscode.cpptools"
+		return 4
+	else
+		rm "$releases_info_file"
+	fi
+
+	echo "Downloading from $download_url"
+
+	# download
+	if ! wget --tries=3 --timeout=60 --continue --output-document="$package_file" "$download_url" ; then
+		echo "Failed to download ms-vscode.cpptools"
+		return 5
+	fi
+
+	# install
+	if ! flatpak run com.visualstudio.code --extensions-dir /opt/vscode-extensions/ --user-data-dir /opt/vscode-extensions/ --install-extension "$package_file" ; then
+		echo "Failed to install ms-vscode.cpptools"
+		return 6
+	fi
+
+	rm "$package_file"
+
+	return 0
+}
+
 flag=true
 while $flag ; do
 	extensions=""
 
 	extensions_list=(
-		ms-vscode.cpptools
 		austin.code-gnu-global
 		formulahendry.code-runner
 		vscjava.vscode-java-debug
@@ -39,6 +85,8 @@ while $flag ; do
 	do
 		try_install_extension $extension || extensions=$extensions" "$extension
 	done
+
+	install_cpptools_extension || extensions=$extensions" ""ms-vscode.cpptools"
 
 	if [ "$extensions" != "" ]; then
 		db_subst maratona-vscode-extensions/question_try_again package $extensions || true
