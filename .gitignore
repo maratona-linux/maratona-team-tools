@@ -14,3 +14,4 @@ debian/maratona-linguagens.postrm.debhelper
 debian/maratona-linguagens/
 debian/maratona-vscode-extensions.postrm.debhelper
 debian/maratona-vscode-extensions/
+*.swp
