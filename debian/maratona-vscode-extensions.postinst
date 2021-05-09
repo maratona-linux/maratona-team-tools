@@ -1,17 +1,18 @@
 #!/bin/bash
 set -e
-source /usr/share/debconf/confmodule
+source '/usr/share/debconf/confmodule'
 
 try_install_extension() {
-	options="--extensions-dir /opt/vscode-extensions/ --user-data-dir /opt/vscode-extensions/"
-	try=0
-	while ! flatpak run com.visualstudio.code --list-extensions $options | grep -q $1 && [ $try -lt 3 ]; do
-		flatpak run com.visualstudio.code --install-extension $1 $options
-	  try=$((try+1))
+	local -r options=(--extensions-dir '/opt/vscode-extensions/' --user-data-dir '/opt/vscode-extensions/')
+	local try=0
+
+	while ! flatpak run com.visualstudio.code "${options[@]}" --list-extensions | grep -q "$1" && [ "$try" -lt 3 ]; do
+		flatpak run com.visualstudio.code "${options[@]}" --install-extension "$1"
+		try=$((try+1))
 	done
 
 	# In case of success, return 0. In case of failure, return 1.
-	if ! flatpak run com.visualstudio.code --list-extensions $options | grep -q $1 ; then
+	if ! flatpak run com.visualstudio.code "${options[@]}" --list-extensions | grep -q "$1" ; then
 		return 1
 	else
 		return 0
@@ -19,10 +20,11 @@ try_install_extension() {
 }
 
 install_cpptools_extension() {
-	readonly releases_url="https://api.github.com/repos/microsoft/vscode-cpptools/releases/latest"
-	readonly releases_info_file="releases.json"
-	download_url=""
-	readonly package_file="cpptools-linux.vsix"
+	local -r releases_url='https://api.github.com/repos/microsoft/vscode-cpptools/releases/latest'
+	local -r releases_info_file='releases.json'
+	local download_url=""
+	local -r package_file='cpptools-linux.vsix'
+	local -r options=(--extensions-dir '/opt/vscode-extensions/' --user-data-dir '/opt/vscode-extensions/')
 
 	echo "Accessing $releases_url"
 
@@ -55,7 +57,7 @@ install_cpptools_extension() {
 	fi
 
 	# install
-	if ! flatpak run com.visualstudio.code --extensions-dir /opt/vscode-extensions/ --user-data-dir /opt/vscode-extensions/ --install-extension "$package_file" ; then
+	if ! flatpak run com.visualstudio.code "${options[@]}" --install-extension "$package_file" ; then
 		echo "Failed to install ms-vscode.cpptools"
 		return 6
 	fi
@@ -70,31 +72,31 @@ while $flag ; do
 	extensions=""
 
 	extensions_list=(
-		austin.code-gnu-global
-		formulahendry.code-runner
-		vscjava.vscode-java-debug
-		vscjava.vscode-java-dependency
-		vscjava.vscode-java-pack
-		vscjava.vscode-java-test
-		redhat.java
-		vscjava.vscode-maven
-		ms-python.python
-  )
+		'austin.code-gnu-global'
+		'formulahendry.code-runner'
+		'vscjava.vscode-java-debug'
+		'vscjava.vscode-java-dependency'
+		'vscjava.vscode-java-pack'
+		'vscjava.vscode-java-test'
+		'redhat.java'
+		'vscjava.vscode-maven'
+		'ms-python.python'
+	)
 
 	for extension in "${extensions_list[@]}"
 	do
-		try_install_extension $extension || extensions=$extensions" "$extension
+		try_install_extension "$extension" || extensions=$extensions" "$extension
 	done
 
 	install_cpptools_extension || extensions=$extensions" ""ms-vscode.cpptools"
 
 	if [ "$extensions" != "" ]; then
-		db_subst maratona-vscode-extensions/question_try_again package $extensions || true
+		db_subst maratona-vscode-extensions/question_try_again package "$extensions" || true
 		db_input high maratona-vscode-extensions/question_try_again || true
 		db_go || true
 		db_get maratona-vscode-extensions/question_try_again || true
 		if [ "$RET" == "Later" ]; then
-			flag=0
+			flag=false
 			db_input high maratona-vscode-extensions/notice || true
 			db_go || true
 			db_get maratona-vscode-extensions/notice
@@ -104,5 +106,5 @@ while $flag ; do
 	fi
 done
 
-rm -rf /usr/share/maratona-vscode-extensions
-mv /opt/vscode-extensions /usr/share/maratona-vscode-extensions
+rm -rf '/usr/share/maratona-vscode-extensions'
+mv '/opt/vscode-extensions' '/usr/share/maratona-vscode-extensions'
