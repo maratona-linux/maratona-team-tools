@@ -1,3 +1,42 @@
+maratona-team-tools (20210517) focal; urgency=medium
+
+  [ Guilherme Banci ]
+  * maratona-linguagens depends on maratona-snap-common
+  * removing maratona-editores-chile and creating maratona-editores-snap
+  * removing vim-gnome and gedit-developer-plugins
+  * adding Clion to maratona-editores-snap
+
+  [ Guilherme Deusdará ]
+  * updating maratona-editores-snap description
+  * creating maratona-vscode-extensions
+  * installing kotlin from url
+  * switching from snapd to flatpak
+  * removing deprecated python2
+  * adding wget to maratona-linguagens dependencies
+  * maratona-vscode-extensions Enhances maratona-editores-flatpak
+
+  [ Bruno Ribas ]
+  * d/control remove trailing spaces
+  * Partial fix to `maratona-vscode-extensions` dependencies
+
+  [ Guilherme Deusdará ]
+  * Update Python3 Doc URI  (#24)
+  * Removing libstdc++ Dependencies (#17) (#25)
+  * creating maratona-kotlin-doc package (#26)
+
+  [ Guilherme Banci ]
+  * fixing kotlin icon
+
+  [ Davi Antônio da Silva Santos ]
+  * Update .gitignore
+  * Bump compat from 9 to 12
+  * Remove sublime and eclipse
+  * Add vim swap files to .gitignore
+  * Fix required download for C/C++ extension
+  * Improve maintainability with locals and arrays
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 17 May 2021 20:12:36 -0300
+
 maratona-team-tools (20190716.1) bionic; urgency=low
 
   * Removed eclipse-cdt plugin
