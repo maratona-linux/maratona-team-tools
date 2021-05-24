@@ -1,3 +1,9 @@
+maratona-team-tools (20210517.1) focal; urgency=medium
+
+  * Update maratona-editores-flatpak's description
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 24 May 2021 18:05:34 -0300
+
 maratona-team-tools (20210517) focal; urgency=medium
 
   [ Guilherme Banci ]
