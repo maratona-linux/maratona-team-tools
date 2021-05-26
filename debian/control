@@ -34,7 +34,7 @@ Architecture: all
 Depends: maratona-flatpak-common
 Recommends: maratona-vscode-extensions
 Description: Pacote contendo a instalação via flatpak dos seguintes editores:
- sublime-text, vscode, pycharm-community, intellij-idea-community, eclipse e clion
+ vscode, pycharm-community, intellij-idea-community e clion
  .
  É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
 
