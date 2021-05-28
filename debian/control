@@ -1,55 +1,82 @@
 Source: maratona-team-tools
 Section: devel
 Priority: optional
-Maintainer: Bruno Cesar Ribas <bruno.ribas@unb.br>
+Maintainer: Bruno César Ribas <bruno.ribas@unb.br>
 Build-Depends: debhelper-compat (= 12)
+Vcs-Git: https://github.com/maratona-linux/maratona-team-tools.git
+Vcs-Browser: https://github.com/maratona-linux/maratona-team-tools
 
 Package: maratona-linguagens
 Architecture: all
-Depends: build-essential, default-jre, default-jdk, gdb, python3, pyflakes3, unzip, wget
-Description: Pacote com os compiladores das linguagens de programação
- aceitas na maratona
- .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+Depends: build-essential, debconf, default-jre, default-jdk, gdb, python3, pyflakes3, python3-distutils, unzip, wget, valgrind
+Description: Pacote com os compiladores das linguagens de programação aceitas na maratona
+ Este pacote instala as ferramentas necessárias para a compilação, interpretação
+ e depuração de programas escritos nas linguagens de programação C, C++, Java,
+ Python 3 e Kotlin 1.4.0
 
 Package: maratona-linguagens-doc
+Section: doc
 Architecture: all
 Depends: manpages-dev, gcc-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html, maratona-kotlin-doc
-Description: Pacote contendo as dependências de documentação das linguagens
- aceitas na maratona
- .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+Description: Pacote contendo a documentação das linguagens aceitas na maratona
+ Este pacote instala a documentação básica das ferramentas usadas para programar
+ nas linguagens C, C++, Java, Python 3 e Kotlin 1.4.0
 
 Package: maratona-editores
 Architecture: all
 Recommends: maratona-editores-flatpak
-Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, python3-distutils
-Description: Pacote Virtual do Maratona Linux com os editores permitidos
- na maratona
+Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks
+Description: Pacote virtual com os editores permitidos na maratona
+ Este pacote faz a instalação dos editores permitidos e recomendados para a
+ Maratona de Programação.
  .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+ É feita a instalaão do vim, geany e seus plugins. emacs. gedit e seus plugins
+ e codeblocks para uso na programação das linguagens permotidas pela Maratona.
 
 Package: maratona-editores-flatpak
 Architecture: all
-Depends: maratona-flatpak-common
+Depends: debconf, maratona-flatpak-common
 Recommends: maratona-vscode-extensions
-Description: Pacote contendo a instalação via flatpak dos seguintes editores:
- vscode, pycharm-community, intellij-idea-community e clion
+Description: Instala os editores para a maratona que estão em flatpak
+ Este pacote instala, via flatpak, a versão mais recente dos editores:
+ vscode, pycharm-community, intellij-idea-community e clion.
  .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+ A instalação dos editores é feita usando-se o repositório flathub.
 
 Package: maratona-vscode-extensions
 Architecture: all
 Enhances: maratona-editores-flatpak
 Pre-depends: maratona-editores-flatpak
 Depends: debconf, jq, wget
-Description: Pacote contendo a instalação das extenções do vscode necessarias para a maratona.
+Description: Pacote com as extensões do vscode necessárias para a maratona
+ São instaladas extensões relativas a programação em C/C++, Java e Python. Todas
+ as extensões, exceto a de C/C++, são baixadas a partir da loja de extensões
+ oficial do Visual Studio Code (VS Code).
  .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+ São instaladas, a partir da loja oficial do VS Code, as extensões:
+  * austin.code-gnu-global
+  * formulahendry.code-runner
+  * vscjava.vscode-java-debug
+  * vscjava.vscode-java-dependency
+  * vscjava.vscode-java-pack
+  * vscjava.vscode-java-test
+  * redhat.java
+  * vscjava.vscode-maven
+  * ms-python.python
+ .
+ A extensão para C/C++ (cpptools) é baixada a partir do repositório oficial do
+ Github. No momento da instalação, usa-se a API do Github para se obter o link
+ de download da versão mais recente. Essa versão é baixada e, em seguida,
+ instalada como as outras. Isso é necessário para que seja possível utilizar a
+ extensão de forma offline.
 
 Package: maratona-kotlin-doc
+Section: doc
 Architecture: all
-Description: Pacote contendo a instalação da documentação do Kotlin para a maratona.
+Description: Pacote contendo a instalação da documentação do Kotlin para a maratona
+ Este pacote contém a documentação em formato PDF da linguagem Kotlin 1.4.20.
  .
- É um pacote seguro para se instalar em qualquer ambiente Ubuntu e Debian.
+ O PDF contém dicas sobre o uso da linguagem Kotlin para o desenvolvimento de
+ sistemas, uso de recursos de programação assíncrona e instruções básicas de
+ programação (sintaxe, convenões, tipos, classes, objetos).
 
