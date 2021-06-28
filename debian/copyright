@@ -1,15 +1,18 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: maratona-background
-Source: <url://example.com>
+Upstream-Name: maratona-team-tools
+Source: <https://github.com/maratona-linux/maratona-team-tools>
 
 Files: *
-Copyright: <years> <put author's name and email here>
-           <years> <likewise for another author>
+Copyright: 2016-2020 Bruno César Ribas <bruno.ribas@unb.br>
+           2017 cassiopc <cassiopc@gmail.com>
+           2021 Davi Antônio da Silva Santos <antoniossdavi@gmail.com>
+           2020-2021 Guilherme Antonio Deusdará Banci <guibanci@gmail.com>
+           2018 Wall Berg Morais <wallbergmirandamorais@gmail.com>
 License: GPL-2.0+
 
-Files: debian/*
-Copyright: 2016 Bruno Ribas <brunoribas@utfpr.edu.br>
-License: GPL-2.0+
+Files: docs/kotlin-reference.pdf
+Copyright: 2020 JetBrains s.r.o and respective authors and developers
+License: Apache-2.0
 
 License: GPL-2.0+
  This package is free software; you can redistribute it and/or modify
@@ -28,7 +31,18 @@ License: GPL-2.0+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
-# Please avoid picking licenses with terms that are more restrictive than the
-# packaged work, as it may make Debian's contributions unacceptable upstream.
+License: Apache-2.0
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ .
+ http://www.apache.org/licenses/LICENSE-2.0
+ .
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ .
+ On Debian systems, the full text of the Apache License 2.0 can be found in the
+ file "/usr/share/common-licenses/Apache-2.0".
