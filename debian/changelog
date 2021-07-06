@@ -1,3 +1,31 @@
+maratona-team-tools (20210517.3) focal; urgency=medium
+
+  * Change icons to MIT (Expat) Licensed ones
+    - replace old icons under non DFSG compliant licenses by others from the
+      devicon project (MIT/Expat).
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 05 Jul 2021 22:04:23 -0300
+
+maratona-team-tools (20210517.2) focal; urgency=medium
+
+  * Update maintainer, sections and dependencies
+    - progress on making the packages Lintian clean (issue #31)
+    - updates `maratona-kotlin-doc` and `maratona-vscode-extensions`
+      description's, as they are not safe to install in any Debian or Ubuntu
+      system due to problems with removals and upgrades;
+    - specifies `maratona-linguagens-doc` and `maratona-kotlin-doc` as
+      documentation packages;
+    - adds `debconf` as a dependency of `maratona-linguagens` and
+      `maratona-editores-flatpak`;
+    - adds `valgrind` as a dependency of `maratona-linguagens`;
+    - move `python3-distutils` from `maratona-editores` to
+      `maratona-linguagens`;
+    - adds Vcs-Browser and Vcs-Git fields on `debian/control`.
+  * Update machine-readable copyright file
+    - include copyright of the Kotlin Documentation (Apache version 2.0)
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 28 Jun 2021 21:13:39 -0300
+
 maratona-team-tools (20210517.1) focal; urgency=medium
 
   * Update maratona-editores-flatpak's description

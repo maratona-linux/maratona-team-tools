@@ -2,7 +2,7 @@
 Version=1
 Name=Python 3.8 Doc
 Comment=Python Doc
-Icon=/usr/share/icons/maratona-linguagens-doc/scalable/python.svg
+Icon=/usr/share/icons/maratona-linguagens-doc/scalable/python-original.svg
 Exec=firefox /usr/share/doc/python3.8/html/index.html
 Terminal=false
 Type=Application
