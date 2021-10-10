@@ -44,31 +44,22 @@ Description: Instala os editores para a maratona que estão em flatpak
  A instalação dos editores é feita usando-se o repositório flathub.
 
 Package: maratona-vscode-extensions
-Architecture: all
+Architecture: amd64
 Enhances: maratona-editores-flatpak
-Pre-depends: maratona-editores-flatpak
-Depends: debconf, jq, wget
+Depends: maratona-editores-flatpak
 Description: Pacote com as extensões do vscode necessárias para a maratona
- São instaladas extensões relativas a programação em C/C++, Java e Python. Todas
- as extensões, exceto a de C/C++, são baixadas a partir da loja de extensões
- oficial do Visual Studio Code (VS Code).
+ São instaladas extensões relativas a programação em C/C++ e Python com
+ suporte a sugestões de código, compilação e debug.
  .
- São instaladas, a partir da loja oficial do VS Code, as extensões:
-  * austin.code-gnu-global
-  * formulahendry.code-runner
-  * vscjava.vscode-java-debug
-  * vscjava.vscode-java-dependency
-  * vscjava.vscode-java-pack
-  * vscjava.vscode-java-test
-  * redhat.java
-  * vscjava.vscode-maven
-  * ms-python.python
+ São instaladas as extensões:
+  * formulahendry.code-runner v0.11.5
+  * ms-python.python v2021.9.1246542782
+  * vscode-cpptools v1.6.0
  .
- A extensão para C/C++ (cpptools) é baixada a partir do repositório oficial do
- Github. No momento da instalação, usa-se a API do Github para se obter o link
- de download da versão mais recente. Essa versão é baixada e, em seguida,
- instalada como as outras. Isso é necessário para que seja possível utilizar a
- extensão de forma offline.
+ A extensão para C/C++ (cpptools) possui licença não livre e usa a versão
+ offline limitada a kernel Linux com arquitetura amd64. Já a extensão para
+ Python não possui suporte aos analisadores estáticos e formatadores de
+ código.
 
 Package: maratona-kotlin-doc
 Section: doc
