@@ -1,3 +1,34 @@
+maratona-team-tools (20210517.4) focal; urgency=medium
+
+  * Avoid running VSCode as root and fix extensions
+    - remove post installation script from maratona-vscode-extensions
+    - ship extensions as pre-installed by Visual Studio Code, extracting them
+      from their VSIX packages
+    - modify the rules so that dh will not mess with the pre-compiled binaries
+      used by the extensions
+    - remove the dependency on jq and wget
+    - change maratona-vscode-extensions Architecture to amd64 due to the
+      limitations of the Microsoft's C/C++ extension
+    - the pre-dependency on maratona-editores-flatpak is now unnecessary
+    - change the installation directory from /usr/share to /var/lib as the
+      files installed by the extensions may be updated and are architecture
+      dependent
+  * Add extensions' licenses to copyright file
+    - add the licenses from the installed Visual Studio Code extensions
+    - fix the typo in the Expat license's text
+  * Fix the flatpak IDEs' versions
+    - com.jetbrains.CLion, version 2021.2, OSTree commit
+      56d95fdc2445ebdf12db960df4f647f6d202871537bbd305bfb69d370ac4adeb
+    - com.jetbrains.IntelliJ-IDEA-Community, version 2021.2.3, OSTree commit
+      204e61c6c77a109eebd4c8ee437a5a9c1a5df700f1056dde37a0b37e464248b2
+    - com.jetbrains.PyCharm-Community, version 2021.3, OSTree commit
+      73f52cccfacd9af4e831ffcc7f8933c4c774050cba651b97b27f5688becd4ce2
+    - com.visualstudio.code, version 1.62.3, OSTRee commit
+      192111179fd0d6cad83f93bafe59a79aeedb42d0b6a94d59a09ce9faff42ae8d
+  * Update maratona-editores-flatpak's description
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Tue, 15 Feb 2022 16:24:27 -0300
+
 maratona-team-tools (20210517.3) focal; urgency=medium
 
   * Change icons to MIT (Expat) Licensed ones
