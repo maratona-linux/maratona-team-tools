@@ -38,10 +38,16 @@ Architecture: all
 Depends: debconf, maratona-flatpak-common
 Recommends: maratona-vscode-extensions
 Description: Instala os editores para a maratona que estão em flatpak
- Este pacote instala, via flatpak, a versão mais recente dos editores:
- vscode, pycharm-community, intellij-idea-community e clion.
+ Este pacote instala, via flatpak, as seguintes versões dos editores de código
+ e ambientes integrados de desenvolvimento (IDEs):
+  * Visual Studio Code 1.62.3
+  * Pycharm Community 2021.3
+  * IntelliJ IDEA Community 2021.2.3
+  * Clion 2021.2
  .
- A instalação dos editores é feita usando-se o repositório flathub.
+ A instalação dos editores é feita usando-se o repositório flathub e
+ especificando-se os commits OSTree específicos referentes às versões dos
+ editores e IDEs.
 
 Package: maratona-vscode-extensions
 Architecture: amd64
