@@ -1,3 +1,10 @@
+maratona-team-tools (20220517) jammy; urgency=medium
+
+  * Bump debhelper compat from 12 to 13
+  * Update copyright years
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Thu, 19 May 2022 12:41:42 -0300
+
 maratona-team-tools (20210517.4) focal; urgency=medium
 
   * Avoid running VSCode as root and fix extensions
