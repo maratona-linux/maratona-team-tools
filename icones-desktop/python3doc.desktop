@@ -1,8 +1,8 @@
 [Desktop Entry]
-Version=1
-Name=Python 3.8 Doc
-Comment=Python Doc
+Version=1.4
+Name=Python 3 Doc
+Comment=Documentation of the system's Python 3
 Icon=/usr/share/icons/maratona-linguagens-doc/scalable/python-original.svg
-Exec=firefox /usr/share/doc/python3.8/html/index.html
+Exec=sensible-browser /usr/share/doc/python3/html/index.html
 Terminal=false
 Type=Application

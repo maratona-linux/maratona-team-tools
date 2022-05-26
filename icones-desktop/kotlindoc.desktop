@@ -1,7 +1,7 @@
 [Desktop Entry]
-Version=1
+Version=1.4
 Name=Kotlin Doc
-Comment=Kotlin Doc
+Comment=Kotlin Documentation for version 1.4.20
 Icon=/usr/share/icons/maratona-linguagens-doc/scalable/kotlin-original.svg
 Exec=evince /usr/share/doc/maratona-kotlin-doc/kotlin-reference.pdf.gz
 Terminal=false
