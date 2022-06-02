@@ -1,3 +1,11 @@
+maratona-team-tools (20220531) jammy; urgency=medium
+
+  * Validate and refactor .desktop files
+    - validate .desktop files with `desktop-file-validate`
+    - replace hard-coded firefox with sensible-browser
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Wed, 01 Jun 2022 20:06:43 -0300
+
 maratona-team-tools (20220517) jammy; urgency=medium
 
   * Bump debhelper compat from 12 to 13
