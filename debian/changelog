@@ -1,3 +1,12 @@
+maratona-team-tools (20220627) jammy; urgency=medium
+
+  * Remove trailing whitespace on control file
+  * Depend on flatpaked OpenJDK 11
+    - depend on flathub's OpenJDK until Freedesktop SDK 22.08 is released,
+      fixing the problems with the outdated Glibc
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 27 Jun 2022 22:56:32 -0300
+
 maratona-team-tools (20220531) jammy; urgency=medium
 
   * Validate and refactor .desktop files
