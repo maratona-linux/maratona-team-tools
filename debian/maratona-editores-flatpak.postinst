@@ -7,11 +7,25 @@ source /usr/share/maratona-flatpak-common/install_flatpak.sh
 flag=1
 while [ $flag -eq 1 ]; do
 	packages=""
-	try_install_flatpak_version "com.visualstudio.code" "192111179fd0d6cad83f93bafe59a79aeedb42d0b6a94d59a09ce9faff42ae8d" || packages=${packages}"code"
-	try_install_flatpak_version "com.jetbrains.CLion" "56d95fdc2445ebdf12db960df4f647f6d202871537bbd305bfb69d370ac4adeb" || packages=${packages}" clion"
-	try_install_flatpak_version "com.jetbrains.PyCharm-Community" "73f52cccfacd9af4e831ffcc7f8933c4c774050cba651b97b27f5688becd4ce2" || packages=${packages}" pycharm-community"
-	try_install_flatpak_version "com.jetbrains.IntelliJ-IDEA-Community" "204e61c6c77a109eebd4c8ee437a5a9c1a5df700f1056dde37a0b37e464248b2" || \
-        packages=${packages}" intellij-idea-community"
+	try_install_flatpak_version "org.freedesktop.Sdk.Extension.openjdk11//21.08" \
+		"644d6a2463500e543f5ff2408f6ca4f11d533484c4709b022fbe2c3e9197328d" \
+		|| packages=${packages}"openjdk11"
+
+	try_install_flatpak_version "com.visualstudio.code" \
+		"192111179fd0d6cad83f93bafe59a79aeedb42d0b6a94d59a09ce9faff42ae8d" \
+		|| packages=${packages}" code"
+
+	try_install_flatpak_version "com.jetbrains.CLion" \
+		"56d95fdc2445ebdf12db960df4f647f6d202871537bbd305bfb69d370ac4adeb" \
+		|| packages=${packages}" clion"
+
+	try_install_flatpak_version "com.jetbrains.PyCharm-Community" \
+		"73f52cccfacd9af4e831ffcc7f8933c4c774050cba651b97b27f5688becd4ce2" \
+		|| packages=${packages}" pycharm-community"
+
+	try_install_flatpak_version "com.jetbrains.IntelliJ-IDEA-Community" \
+		"204e61c6c77a109eebd4c8ee437a5a9c1a5df700f1056dde37a0b37e464248b2" \
+		|| packages=${packages}" intellij-idea-community"
 
 	if [ "${packages}" != "" ]; then
 		db_subst maratona-editores-flatpak/question_try_again package "${packages}" || true
