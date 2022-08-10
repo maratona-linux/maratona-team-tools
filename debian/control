@@ -11,8 +11,12 @@ Architecture: all
 Depends: build-essential, debconf, openjdk-17-jdk, gdb, python3, pyflakes3, python3-distutils, unzip, wget, valgrind
 Description: Pacote com os compiladores das linguagens de programação aceitas na maratona
  Este pacote instala as ferramentas necessárias para a compilação, interpretação
- e depuração de programas escritos nas linguagens de programação C, C++, Java,
- Python 3 e Kotlin 1.4.0
+ e depuração de programas escritos nas linguagens de programação:
+  * C
+  * C++
+  * Java 17
+  * Python 3
+  * Kotlin 1.6.10
 
 Package: maratona-linguagens-doc
 Section: doc
@@ -20,7 +24,12 @@ Architecture: all
 Depends: manpages-dev, gcc-doc, openjdk-17-doc, python3-doc, cppreference-doc-en-html, maratona-kotlin-doc
 Description: Pacote contendo a documentação das linguagens aceitas na maratona
  Este pacote instala a documentação básica das ferramentas usadas para programar
- nas linguagens C, C++, Java 17, Python 3 e Kotlin 1.4.0
+ nas linguagens:
+  * C
+  * C++
+  * Java 17
+  * Python 3
+  * Kotlin 1.6.10
 
 Package: maratona-editores
 Architecture: all
@@ -40,14 +49,17 @@ Recommends: maratona-vscode-extensions
 Description: Instala os editores para a maratona que estão em flatpak
  Este pacote instala, via flatpak, as seguintes versões dos editores de código
  e ambientes integrados de desenvolvimento (IDEs):
-  * Visual Studio Code 1.62.3
-  * Pycharm Community 2021.3
-  * IntelliJ IDEA Community 2021.2.3
-  * Clion 2021.2
+  * Visual Studio Code 1.67.2
+  * Pycharm Community 2022.1.3
+  * IntelliJ IDEA Community 2022.1.4
+  * Clion 2022.1.3
  .
- A instalação dos editores é feita usando-se o repositório flathub e
- especificando-se os commits OSTree específicos referentes às versões dos
- editores e IDEs.
+ Este pacote também instala os seguintes compiladores e ferramentas exigidos
+ pelos IDEs em flatpak:
+  * OpenJDK 17
+ .
+ A instalação dos flatpaks é feita usando-se o repositório flathub e
+ especificando-se os commits OSTree específicos referentes às versões escolhidas.
 
 Package: maratona-vscode-extensions
 Architecture: amd64
@@ -71,7 +83,8 @@ Package: maratona-kotlin-doc
 Section: doc
 Architecture: all
 Description: Pacote contendo a instalação da documentação do Kotlin para a maratona
- Este pacote contém a documentação em formato PDF da linguagem Kotlin 1.4.20.
+ Este pacote contém a documentação em formato PDF da linguagem Kotlin 1.6.10 ou
+ superior, incluindo até a versão 1.7.0.
  .
  O PDF contém dicas sobre o uso da linguagem Kotlin para o desenvolvimento de
  sistemas, uso de recursos de programação assíncrona e instruções básicas de
