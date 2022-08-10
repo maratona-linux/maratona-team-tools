@@ -8,7 +8,7 @@ Vcs-Browser: https://github.com/maratona-linux/maratona-team-tools
 
 Package: maratona-linguagens
 Architecture: all
-Depends: build-essential, debconf, default-jre, default-jdk, gdb, python3, pyflakes3, python3-distutils, unzip, wget, valgrind
+Depends: build-essential, debconf, openjdk-17-jdk, gdb, python3, pyflakes3, python3-distutils, unzip, wget, valgrind
 Description: Pacote com os compiladores das linguagens de programação aceitas na maratona
  Este pacote instala as ferramentas necessárias para a compilação, interpretação
  e depuração de programas escritos nas linguagens de programação C, C++, Java,
@@ -17,20 +17,20 @@ Description: Pacote com os compiladores das linguagens de programação aceitas 
 Package: maratona-linguagens-doc
 Section: doc
 Architecture: all
-Depends: manpages-dev, gcc-doc, default-jdk-doc, python3-doc, cppreference-doc-en-html, maratona-kotlin-doc
+Depends: manpages-dev, gcc-doc, openjdk-17-doc, python3-doc, cppreference-doc-en-html, maratona-kotlin-doc
 Description: Pacote contendo a documentação das linguagens aceitas na maratona
  Este pacote instala a documentação básica das ferramentas usadas para programar
- nas linguagens C, C++, Java, Python 3 e Kotlin 1.4.0
+ nas linguagens C, C++, Java 17, Python 3 e Kotlin 1.4.0
 
 Package: maratona-editores
 Architecture: all
 Recommends: maratona-editores-flatpak
-Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks
+Depends: maratona-linguagens, vim, geany, geany-plugins, geany-plugin-addons, emacs, gedit, gedit-plugins, codeblocks, codeblocks-contrib
 Description: Pacote virtual com os editores permitidos na maratona
  Este pacote faz a instalação dos editores permitidos e recomendados para a
  Maratona de Programação.
  .
- É feita a instalaão do vim, geany e seus plugins. emacs. gedit e seus plugins
+ É feita a instalação do vim, geany e seus plugins. emacs. gedit e seus plugins
  e codeblocks para uso na programação das linguagens permotidas pela Maratona.
 
 Package: maratona-editores-flatpak
