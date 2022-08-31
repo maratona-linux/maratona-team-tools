@@ -3,6 +3,6 @@ Version=1.4
 Name=Java API
 Comment=The System's Java API Documentation
 Icon=/usr/share/icons/maratona-linguagens-doc/scalable/java-original.svg
-Exec=sensible-browser /usr/share/doc/default-jre-headless/api/index.html
+Exec=sensible-browser /usr/share/doc/openjdk-17-doc/api/index.html
 Terminal=false
 Type=Application
