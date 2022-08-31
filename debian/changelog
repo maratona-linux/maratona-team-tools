@@ -1,3 +1,19 @@
+maratona-team-tools (20220830) jammy; urgency=medium
+
+  * Specify JDK version to 17 and codeblocks plug-ins
+  * Upgrade Flatpaked IDEs and JDK
+    - OpenJDK 17.0.1
+    - PyCharm 2022.1.3
+    - Intellij 2022.1.4
+    - CLion 2022.1.3
+    - Visual Studio Code 1.67.2
+  * Upgrade kotlin to 1.6.10
+    - upgrade reference PDF up to 1.7.0
+    - upgrade hashes from MD5 to SHA512
+  * Upgrade descriptions with the new flatpaks
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Tue, 30 Aug 2022 22:43:22 -0300
+
 maratona-team-tools (20220627) jammy; urgency=medium
 
   * Remove trailing whitespace on control file
