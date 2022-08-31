@@ -1,3 +1,9 @@
+maratona-team-tools (20220831) jammy; urgency=medium
+
+  * Fix broken Javadocs desktop file
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Wed, 31 Aug 2022 16:21:07 -0300
+
 maratona-team-tools (20220830) jammy; urgency=medium
 
   * Specify JDK version to 17 and codeblocks plug-ins
