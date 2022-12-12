@@ -12,7 +12,7 @@ while [ $flag -eq 1 ]; do
 		|| packages=${packages}"openjdk17"
 
 	try_install_flatpak_version "com.visualstudio.code" \
-		"6f93fdc7022a10f015f0ced05a4865dd8bbbb6b183033ff31a75c6446fc42beb" \
+		"a3c1c20103d56d180dd30c5bdf25763520dbe0987e2ebadd96922ed109d66626" \
 		|| packages=${packages}" code"
 
 	try_install_flatpak_version "com.jetbrains.CLion" \
