@@ -1,3 +1,23 @@
+maratona-team-tools (20230113) jammy; urgency=medium
+
+  * Replace flatpaked IDEs with native packages
+    - redirect the python command to python3 with the package
+      python-is-python3, to avoid needing to reconfigure the Visual Studio
+      Code Python extension
+    - add pylint as a dependency, matching the default configuration of the
+      Visual Studio Code Python extension
+    - drop dependencies on debconf and maratona-flatpak-common
+    - rename the maratona-editores-flatpak package to
+      maratona-editores-external
+    - depend on the new packages:
+      - maratona-visual-studio-code
+      - maratona-intellij-idea
+      - maratona-intellij-pycharm
+      - maratona-intellij-clion
+  * Update authors' copyright information
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Sat, 14 Jan 2023 00:27:28 -0300
+
 maratona-team-tools (20220831) jammy; urgency=medium
 
   * Fix broken Javadocs desktop file
