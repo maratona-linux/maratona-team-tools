@@ -1,3 +1,14 @@
+maratona-team-tools (20230226) jammy; urgency=medium
+
+  * Update vscode cpptools-linux to 1.14.3
+  * Update vscode code runner to 0.12.0
+  * Update vscode MS Python to 2022.18.2
+  * Add a vscode extension for Java support
+  * Add a VSCode extension to support Kotlin
+  * Remove v prefix in the package description
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Sun, 26 Feb 2023 17:14:48 -0300
+
 maratona-team-tools (20230113) jammy; urgency=medium
 
   * Replace flatpaked IDEs with native packages
