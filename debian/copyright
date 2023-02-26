@@ -28,8 +28,8 @@ Files: extensions/formulahendry.code-runner-0.12.0/*
 Copyright: 2017 Jun Han
 License: Expat
 
-Files: extensions/ms-python.python-2021.9.1246542782/*
-Copyright: Microsoft Corporation
+Files: extensions/ms-python.python-2022.18.2/*
+Copyright: 2022 Microsoft Corporation
 License: Expat and Microsoft Pylance Extension for Visual Studio Code License Terms
 Comment: Contains proprietary components
 
