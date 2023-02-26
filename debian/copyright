@@ -39,6 +39,11 @@ License: Expat
 Comment: Third-Party copyright information is located in the file
  extensions/cpptools-linux-1.14.3/ThirdPartyNotices.txt.
 
+Files: extensions/fwcd.kotlin-0.2.26/*
+Copyright: 2016 George Fraser
+           2018 fwcd
+License: Expat
+
 License: GPL-2.0+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
