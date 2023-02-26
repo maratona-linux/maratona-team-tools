@@ -63,7 +63,7 @@ Description: Pacote com as extensões do vscode necessárias para a maratona
  suporte a sugestões de código, compilação e debug.
  .
  São instaladas as extensões:
-  * formulahendry.code-runner v0.11.5
+  * formulahendry.code-runner v0.12.0
   * ms-python.python v2021.9.1246542782
   * vscode-cpptools v1.14.3
  .

@@ -1,3 +1,17 @@
+### 0.12.0 (2023-01-23)
+* Add support for Zig language
+* Use `runghc` to replace `runhaskell` for Haskell 
+
+### 0.11.8 (2022-06-11)
+* Add support for Standard ML
+* Adopt extension sponsorship
+
+### 0.11.7 (2022-02-08)
+* Update run/stop icons
+
+### 0.11.6 (2021-10-10)
+* Add support for Ring
+
 ### 0.11.5 (2021-07-10)
 * [#776](https://github.com/formulahendry/vscode-code-runner/pull/776): Add stop button in editor title bar
 

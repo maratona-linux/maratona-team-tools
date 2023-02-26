@@ -24,7 +24,7 @@ Copyright: 2023 Microsoft Corporation
 License: Microsoft C/C++ Extension for Visual Studio Code Licensing Terms
 Comment: Proprietary
 
-Files: extensions/formulahendry.code-runner-0.11.5/*
+Files: extensions/formulahendry.code-runner-0.12.0/*
 Copyright: 2017 Jun Han
 License: Expat
 

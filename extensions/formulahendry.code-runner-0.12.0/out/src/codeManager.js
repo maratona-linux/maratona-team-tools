@@ -112,7 +112,7 @@ class CodeManager {
     stopRunning() {
         if (this._isRunning) {
             this._isRunning = false;
-            vscode.commands.executeCommand('setContext', 'code-runner.codeRunning', false);
+            vscode.commands.executeCommand("setContext", "code-runner.codeRunning", false);
             const kill = require("tree-kill");
             kill(this._process.pid);
         }
@@ -416,7 +416,7 @@ class CodeManager {
     executeCommandInOutputChannel(executor, appendFile = true) {
         return __awaiter(this, void 0, void 0, function* () {
             this._isRunning = true;
-            vscode.commands.executeCommand('setContext', 'code-runner.codeRunning', true);
+            vscode.commands.executeCommand("setContext", "code-runner.codeRunning", true);
             const clearPreviousOutput = this._config.get("clearPreviousOutput");
             if (clearPreviousOutput) {
                 this._outputChannel.clear();
@@ -439,7 +439,7 @@ class CodeManager {
             });
             this._process.on("close", (code) => {
                 this._isRunning = false;
-                vscode.commands.executeCommand('setContext', 'code-runner.codeRunning', false);
+                vscode.commands.executeCommand("setContext", "code-runner.codeRunning", false);
                 const endTime = new Date();
                 const elapsedTime = (endTime.getTime() - startTime.getTime()) / 1000;
                 this._outputChannel.appendLine("");

@@ -1,8 +1,8 @@
 {
   "name": "code-runner",
   "displayName": "Code Runner",
-  "description": "Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Obj-C, Rust, Racket, Scheme, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D, Lisp, Kit, V, SCSS, Sass, CUDA, Less, Fortran",
-  "version": "0.11.5",
+  "description": "Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Obj-C, Rust, Racket, Scheme, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D, Lisp, Kit, V, SCSS, Sass, CUDA, Less, Fortran, Ring, Standard ML, Zig",
+  "version": "0.12.0",
   "featureFlags": {
     "usingNewPythonInterpreterPathApi": true,
     "usingNewPythonInterpreterPathApiV2": true
@@ -33,6 +33,9 @@
     "type": "git",
     "url": "https://github.com/formulahendry/vscode-code-runner.git"
   },
+  "sponsor": {
+    "url": "https://www.patreon.com/junhan"
+  },
   "activationEvents": [
     "onCommand:code-runner.run",
     "onCommand:code-runner.runCustomCommand",
@@ -45,10 +48,7 @@
       {
         "command": "code-runner.run",
         "title": "Run Code",
-        "icon": {
-          "light": "./images/run-light.svg",
-          "dark": "./images/run-dark.svg"
-        }
+        "icon": "$(play)"
       },
       {
         "command": "code-runner.runCustomCommand",
@@ -61,10 +61,7 @@
       {
         "command": "code-runner.stop",
         "title": "Stop Code Run",
-        "icon": {
-          "light": "./images/stop-light.svg",
-          "dark": "./images/stop-dark.svg"
-        }
+        "icon": "$(debug-stop)"
       }
     ],
     "keybindings": [
@@ -138,6 +135,7 @@
             "javascript": "node",
             "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
             "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+            "zig": "zig run",
             "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "php": "php",
@@ -173,7 +171,7 @@
             "dart": "dart",
             "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
             "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-            "haskell": "runhaskell",
+            "haskell": "runghc",
             "nim": "nim compile --verbosity:0 --hints:off --run",
             "lisp": "sbcl --script",
             "kit": "kitc --run",
@@ -184,7 +182,8 @@
             "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-            "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+            "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+            "sml": "cd $dir && sml $fileName"
           },
           "description": "Set the executor of each language.",
           "scope": "resource"
@@ -198,6 +197,7 @@
             ".jl": "julia",
             ".cr": "crystal",
             ".ml": "ocaml",
+            ".zig": "zig run",
             ".exs": "elixir",
             ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
             ".rkt": "racket",
@@ -219,7 +219,9 @@
             ".v": "v run",
             ".vsh": "v run",
             ".sass": "sass --style expanded",
-            ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+            ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+            ".ring": "ring",
+            ".sml": "cd $dir && sml $fileName"
           },
           "description": "Set the executor of each file extension.",
           "scope": "resource"
