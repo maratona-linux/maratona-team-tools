@@ -65,7 +65,7 @@ Description: Pacote com as extensões do vscode necessárias para a maratona
  São instaladas as extensões:
   * formulahendry.code-runner v0.11.5
   * ms-python.python v2021.9.1246542782
-  * vscode-cpptools v1.6.0
+  * vscode-cpptools v1.14.3
  .
  A extensão para C/C++ (cpptools) possui licença não livre e usa a versão
  offline limitada a kernel Linux com arquitetura amd64. Já a extensão para

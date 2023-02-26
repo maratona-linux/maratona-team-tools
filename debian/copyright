@@ -19,8 +19,8 @@ Copyright: 2015 konpa
 License: Expat
 Comment: Icons from project devicon <https://github.com/devicons/devicon>
 
-Files: extensions/cpptools-linux-1.6.0/*
-Copyright: Microsoft Corporation
+Files: extensions/cpptools-linux-1.14.3/*
+Copyright: 2023 Microsoft Corporation
 License: Microsoft C/C++ Extension for Visual Studio Code Licensing Terms
 Comment: Proprietary
 
