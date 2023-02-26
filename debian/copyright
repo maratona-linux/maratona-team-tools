@@ -33,6 +33,12 @@ Copyright: 2022 Microsoft Corporation
 License: Expat and Microsoft Pylance Extension for Visual Studio Code License Terms
 Comment: Contains proprietary components
 
+Files: extensions/vscjava.vscode-java-pack-0.25.7/*
+Copyright: 2023 Microsoft Corporation
+License: Expat
+Comment: Third-Party copyright information is located in the file
+ extensions/cpptools-linux-1.14.3/ThirdPartyNotices.txt.
+
 License: GPL-2.0+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
