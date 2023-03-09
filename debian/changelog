@@ -1,3 +1,80 @@
+maratona-team-tools (20230226) jammy; urgency=medium
+
+  * Update vscode cpptools-linux to 1.14.3
+  * Update vscode code runner to 0.12.0
+  * Update vscode MS Python to 2022.18.2
+  * Add a vscode extension for Java support
+  * Add a VSCode extension to support Kotlin
+  * Remove v prefix in the package description
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Sun, 26 Feb 2023 17:14:48 -0300
+
+maratona-team-tools (20230113) jammy; urgency=medium
+
+  * Replace flatpaked IDEs with native packages
+    - redirect the python command to python3 with the package
+      python-is-python3, to avoid needing to reconfigure the Visual Studio
+      Code Python extension
+    - add pylint as a dependency, matching the default configuration of the
+      Visual Studio Code Python extension
+    - drop dependencies on debconf and maratona-flatpak-common
+    - rename the maratona-editores-flatpak package to
+      maratona-editores-external
+    - depend on the new packages:
+      - maratona-visual-studio-code
+      - maratona-intellij-idea
+      - maratona-intellij-pycharm
+      - maratona-intellij-clion
+  * Update authors' copyright information
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Sat, 14 Jan 2023 00:27:28 -0300
+
+maratona-team-tools (20220831) jammy; urgency=medium
+
+  * Fix broken Javadocs desktop file
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Wed, 31 Aug 2022 16:21:07 -0300
+
+maratona-team-tools (20220830) jammy; urgency=medium
+
+  * Specify JDK version to 17 and codeblocks plug-ins
+  * Upgrade Flatpaked IDEs and JDK
+    - OpenJDK 17.0.1
+    - PyCharm 2022.1.3
+    - Intellij 2022.1.4
+    - CLion 2022.1.3
+    - Visual Studio Code 1.67.2
+  * Upgrade kotlin to 1.6.10
+    - upgrade reference PDF up to 1.7.0
+    - upgrade hashes from MD5 to SHA512
+  * Upgrade descriptions with the new flatpaks
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Tue, 30 Aug 2022 22:43:22 -0300
+
+maratona-team-tools (20220627) jammy; urgency=medium
+
+  * Remove trailing whitespace on control file
+  * Depend on flatpaked OpenJDK 11
+    - depend on flathub's OpenJDK until Freedesktop SDK 22.08 is released,
+      fixing the problems with the outdated Glibc
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Mon, 27 Jun 2022 22:56:32 -0300
+
+maratona-team-tools (20220531) jammy; urgency=medium
+
+  * Validate and refactor .desktop files
+    - validate .desktop files with `desktop-file-validate`
+    - replace hard-coded firefox with sensible-browser
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Wed, 01 Jun 2022 20:06:43 -0300
+
+maratona-team-tools (20220517) jammy; urgency=medium
+
+  * Bump debhelper compat from 12 to 13
+  * Update copyright years
+
+ -- Davi Antônio da Silva Santos <antoniossdavi@gmail.com>  Thu, 19 May 2022 12:41:42 -0300
+
 maratona-team-tools (20210517.4) focal; urgency=medium
 
   * Avoid running VSCode as root and fix extensions

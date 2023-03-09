@@ -1,8 +1,8 @@
 [Desktop Entry]
-Version=1
-Name=C++ Reference
-Comment=C++ Reference
+Version=1.4
+Name=C/C++ Reference
+Comment=C and C++ standard library reference (English, Devhelp variant)
 Icon=/usr/share/icons/maratona-linguagens-doc/scalable/cplusplus-original.svg
-Exec=firefox /usr/share/cppreference/doc/html/en/index.html
+Exec=sensible-browser /usr/share/cppreference/doc/html/en/index.html
 Terminal=false
 Type=Application

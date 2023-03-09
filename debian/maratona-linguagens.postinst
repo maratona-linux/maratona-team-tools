@@ -2,12 +2,12 @@
 set -e
 . /usr/share/debconf/confmodule
 
-URL="https://github.com/JetBrains/kotlin/releases/download/v1.4.0/kotlin-compiler-1.4.0.zip"
-valid_md5="590c97a160d381da103bfa0d8d4461a5"
+URL="https://github.com/JetBrains/kotlin/releases/download/v1.6.10/kotlin-compiler-1.6.10.zip"
+valid_sha512="3a2b08dfb3d6ef94a1f7c46ff5ef70258209798b165b5a144a18ff1ecc98ee5bf74e00e524136fbe33d2bd7b5ea4baffb8c9739c80932ea9768e9061aa6acc4f"
 
 wget --tries=3 --wait=2 --random-wait -O /var/cache/kotlin.zip $URL
 
-if (( $? == 0 )) && md5sum --quiet -c <<<"$valid_md5 /var/cache/kotlin.zip"  ; then
+if (( $? == 0 )) && sha512sum --quiet -c <<<"$valid_sha512 /var/cache/kotlin.zip"  ; then
   unzip /var/cache/kotlin.zip -d /opt/
   rm -f /var/cache/kotlin.zip
 else
